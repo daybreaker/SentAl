@@ -1,0 +1,5 @@
+<% if !@company.sentiment.blank? %>
+  <% @company.sentiment.find_all{|x| !x.kind_of?(Array)}.each do |k,v| %>
+    <%= k + ": " + v %><br />
+  <% end %>
+<% end %>

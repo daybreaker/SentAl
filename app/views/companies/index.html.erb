@@ -1,0 +1,5 @@
+<%= link_to 'Add New', new_company_path() %>
+<% @companies.each do |x| %>
+  <%= x.name + ": " + x.index %>
+<% end %>
+
