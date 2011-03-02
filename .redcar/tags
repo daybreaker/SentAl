@@ -1,4 +1,4 @@
-1298866497
+1298946119
 AddFieldsToCompany	/home/daybreaker/Shared/SentAl/db/migrate/20110228030557_add_fields_to_company.rb	class AddFieldsToCompany 
 AddFieldsToTweets	/home/daybreaker/Shared/SentAl/db/migrate/20110228031448_add_fields_to_tweets.rb	class AddFieldsToTweets 
 Application	/home/daybreaker/Shared/SentAl/config/application.rb	  class Application 
@@ -42,6 +42,7 @@ resp	/home/daybreaker/Shared/SentAl/vendor/plugins/twitter_sentiment_api/lib/twi
 sentimentAnalyze	/home/daybreaker/Shared/SentAl/vendor/plugins/twitter_sentiment_api/lib/twitter_sentiment_api.rb	def sentimentAnalyze
 sentimentSearch	/home/daybreaker/Shared/SentAl/vendor/plugins/twitter_sentiment_api/lib/twitter_sentiment_api.rb	def sentimentSearch
 sentimentUser	/home/daybreaker/Shared/SentAl/vendor/plugins/twitter_sentiment_api/lib/twitter_sentiment_api.rb	def sentimentUser
+show	/home/daybreaker/Shared/SentAl/app/controllers/companies_controller.rb	  def show
 show	/home/daybreaker/Shared/SentAl/app/controllers/stocks_controller.rb	  def show
 test_homepage	/home/daybreaker/Shared/SentAl/test/performance/browsing_test.rb	  def test_homepage
 up	/home/daybreaker/Shared/SentAl/db/migrate/20110228021521_create_companies.rb	  def self.up

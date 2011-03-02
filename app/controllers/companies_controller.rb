@@ -5,17 +5,24 @@ class CompaniesController < ApplicationController
     @companies = Company.all
   end
   
+  def show
+    @company = Company.find(params[:id])
+  end
+  
   def new
     @company = Company.new
   end
   
   def create
     @company = Company.new(params[:company])
-    @company.term = @company.name.downcase
+    @company.term = CGI::escape(@company.name.downcase)
     
-    @company.save
-    @company.refresh_sentiment
+    if @company.save
+      @company.refresh_sentiment
+      redirect_to(@company, :notice => 'Stock was successfully created.')
+      else
+        render :action => "new"
+      end
     
-    redirect :index
   end
 end

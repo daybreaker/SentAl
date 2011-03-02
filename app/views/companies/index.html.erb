@@ -1,5 +1,10 @@
 <%= link_to 'Add New', new_company_path() %>
 <% @companies.each do |x| %>
-  <%= x.name + ": " + x.index %>
+<div id="<%= x.id %>">
+  <%= x.name + ": " + x.index.to_s %><br />
+  <p>
+    <% %w(positive negative nuetral last_refresh ).each do |y| %>
+      <%= y.humanize + ": " + eval("x." + y).to_s %><br />
+    <% end %>
 <% end %>
 
