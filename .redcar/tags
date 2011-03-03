@@ -1,4 +1,4 @@
-1298946119
+1299159039
 AddFieldsToCompany	/home/daybreaker/Shared/SentAl/db/migrate/20110228030557_add_fields_to_company.rb	class AddFieldsToCompany 
 AddFieldsToTweets	/home/daybreaker/Shared/SentAl/db/migrate/20110228031448_add_fields_to_tweets.rb	class AddFieldsToTweets 
 Application	/home/daybreaker/Shared/SentAl/config/application.rb	  class Application 
