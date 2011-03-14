@@ -1,10 +1,16 @@
 <%= link_to 'Add New', new_company_path() %>
 <% @companies.each do |x| %>
-<div id="<%= x.id %>">
-  <%= x.name + ": " + x.index.to_s %><br />
-  <p>
-    <% %w(positive negative nuetral last_refresh ).each do |y| %>
-      <%= y.humanize + ": " + eval("x." + y).to_s %><br />
-    <% end %>
+<div id="company_<%= x.id %>">
+  <%= x.name %><br />
+  <div id="sentiment_<%= x.id %>">
+  <% x.sentiments.each do |sent| %>
+    <p>
+      <% %w(index positive negative nuetral last_refresh ).each do |y| %>
+        <%= y.humanize + ": " + eval("sent." + y).to_s %><br />
+      <% end %>
+    </p>
+  <% end %>
+  <a href="javascript://" class="refresh-company" rel="<%= x.id %>">Refresh</a>
+</div>
 <% end %>
 

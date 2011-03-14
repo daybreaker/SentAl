@@ -2,7 +2,7 @@ class CompaniesController < ApplicationController
   require 'twitter_sentiment_api'
   
   def index
-    @companies = Company.all
+    @companies = Company.order('name').all
   end
   
   def show
@@ -20,9 +20,16 @@ class CompaniesController < ApplicationController
     if @company.save
       @company.refresh_sentiment
       redirect_to(@company, :notice => 'Stock was successfully created.')
-      else
-        render :action => "new"
-      end
+    else
+      render :action => "new"
+    end
     
+  end
+  
+  def refresh_company
+    @company = Company.find(params[:id])
+    @company.refresh_sentiment
+    
+    render :nothing => true
   end
 end

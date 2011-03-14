@@ -1,5 +1,6 @@
-1299159039
+1300067938
 AddFieldsToCompany	/home/daybreaker/Shared/SentAl/db/migrate/20110228030557_add_fields_to_company.rb	class AddFieldsToCompany 
+AddFieldsToSentiment	/home/daybreaker/Shared/SentAl/db/migrate/20110308215541_add_fields_to_sentiment.rb	class AddFieldsToSentiment 
 AddFieldsToTweets	/home/daybreaker/Shared/SentAl/db/migrate/20110228031448_add_fields_to_tweets.rb	class AddFieldsToTweets 
 Application	/home/daybreaker/Shared/SentAl/config/application.rb	  class Application 
 ApplicationController	/home/daybreaker/Shared/SentAl/app/controllers/application_controller.rb	class ApplicationController 
@@ -12,9 +13,17 @@ CompaniesHelperTest	/home/daybreaker/Shared/SentAl/test/unit/helpers/companies_h
 Company	/home/daybreaker/Shared/SentAl/app/models/company.rb	class Company 
 CompanyTest	/home/daybreaker/Shared/SentAl/test/unit/company_test.rb	class CompanyTest 
 CreateCompanies	/home/daybreaker/Shared/SentAl/db/migrate/20110228021521_create_companies.rb	class CreateCompanies 
+CreateSentiments	/home/daybreaker/Shared/SentAl/db/migrate/20110308215417_create_sentiments.rb	class CreateSentiments 
 CreateStocks	/home/daybreaker/Shared/SentAl/db/migrate/20110228040923_create_stocks.rb	class CreateStocks 
 CreateTweets	/home/daybreaker/Shared/SentAl/db/migrate/20110228031352_create_tweets.rb	class CreateTweets 
+RenameNeutralField	/home/daybreaker/Shared/SentAl/db/migrate/20110308235949_rename_neutral_field.rb	class RenameNeutralField 
 SentAl	/home/daybreaker/Shared/SentAl/config/application.rb	module SentAl
+Sentiment	/home/daybreaker/Shared/SentAl/app/models/sentiment.rb	class Sentiment 
+SentimentTest	/home/daybreaker/Shared/SentAl/test/unit/sentiment_test.rb	class SentimentTest 
+SentimentsController	/home/daybreaker/Shared/SentAl/app/controllers/sentiments_controller.rb	class SentimentsController 
+SentimentsControllerTest	/home/daybreaker/Shared/SentAl/test/functional/sentiments_controller_test.rb	class SentimentsControllerTest 
+SentimentsHelper	/home/daybreaker/Shared/SentAl/app/helpers/sentiments_helper.rb	module SentimentsHelper
+SentimentsHelperTest	/home/daybreaker/Shared/SentAl/test/unit/helpers/sentiments_helper_test.rb	class SentimentsHelperTest 
 Stock	/home/daybreaker/Shared/SentAl/app/models/stock.rb	class Stock 
 StockTest	/home/daybreaker/Shared/SentAl/test/unit/stock_test.rb	class StockTest 
 StocksController	/home/daybreaker/Shared/SentAl/app/controllers/stocks_controller.rb	class StocksController 
@@ -32,13 +41,18 @@ down	/home/daybreaker/Shared/SentAl/db/migrate/20110228030557_add_fields_to_comp
 down	/home/daybreaker/Shared/SentAl/db/migrate/20110228031352_create_tweets.rb	  def self.down
 down	/home/daybreaker/Shared/SentAl/db/migrate/20110228031448_add_fields_to_tweets.rb	  def self.down
 down	/home/daybreaker/Shared/SentAl/db/migrate/20110228040923_create_stocks.rb	  def self.down
+down	/home/daybreaker/Shared/SentAl/db/migrate/20110308215417_create_sentiments.rb	  def self.down
+down	/home/daybreaker/Shared/SentAl/db/migrate/20110308215541_add_fields_to_sentiment.rb	  def self.down
+down	/home/daybreaker/Shared/SentAl/db/migrate/20110308235949_rename_neutral_field.rb	  def self.down
 edit	/home/daybreaker/Shared/SentAl/app/controllers/stocks_controller.rb	  def edit
 index	/home/daybreaker/Shared/SentAl/app/controllers/companies_controller.rb	  def index
 index	/home/daybreaker/Shared/SentAl/app/controllers/stocks_controller.rb	  def index
 new	/home/daybreaker/Shared/SentAl/app/controllers/companies_controller.rb	  def new
 new	/home/daybreaker/Shared/SentAl/app/controllers/stocks_controller.rb	  def new
+refresh_company	/home/daybreaker/Shared/SentAl/app/controllers/companies_controller.rb	  def refresh_company
 refresh_sentiment	/home/daybreaker/Shared/SentAl/app/models/company.rb	  def refresh_sentiment
 resp	/home/daybreaker/Shared/SentAl/vendor/plugins/twitter_sentiment_api/lib/twitter_sentiment_api.rb	def resp
+sentiment	/home/daybreaker/Shared/SentAl/app/models/company.rb	  def sentiment
 sentimentAnalyze	/home/daybreaker/Shared/SentAl/vendor/plugins/twitter_sentiment_api/lib/twitter_sentiment_api.rb	def sentimentAnalyze
 sentimentSearch	/home/daybreaker/Shared/SentAl/vendor/plugins/twitter_sentiment_api/lib/twitter_sentiment_api.rb	def sentimentSearch
 sentimentUser	/home/daybreaker/Shared/SentAl/vendor/plugins/twitter_sentiment_api/lib/twitter_sentiment_api.rb	def sentimentUser
@@ -50,4 +64,7 @@ up	/home/daybreaker/Shared/SentAl/db/migrate/20110228030557_add_fields_to_compan
 up	/home/daybreaker/Shared/SentAl/db/migrate/20110228031352_create_tweets.rb	  def self.up
 up	/home/daybreaker/Shared/SentAl/db/migrate/20110228031448_add_fields_to_tweets.rb	  def self.up
 up	/home/daybreaker/Shared/SentAl/db/migrate/20110228040923_create_stocks.rb	  def self.up
+up	/home/daybreaker/Shared/SentAl/db/migrate/20110308215417_create_sentiments.rb	  def self.up
+up	/home/daybreaker/Shared/SentAl/db/migrate/20110308215541_add_fields_to_sentiment.rb	  def self.up
+up	/home/daybreaker/Shared/SentAl/db/migrate/20110308235949_rename_neutral_field.rb	  def self.up
 update	/home/daybreaker/Shared/SentAl/app/controllers/stocks_controller.rb	  def update

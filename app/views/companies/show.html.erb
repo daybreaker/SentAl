@@ -1,7 +1,7 @@
     <%= @company.name %><br />
-    <%= @company.index %>
+    <%= @company.sentiments.last.index %>
     
-
+    <%= link_to "Back", companies_path() %>
 <% 
 =begin
 if !@company.index.blank? %>

@@ -1,7 +1,11 @@
 SentAl::Application.routes.draw do
+  resources :sentiments
+
   resources :stocks
 
   resources :companies
+  
+  post 'refresh_company/:id' => 'companies#refresh_company'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
